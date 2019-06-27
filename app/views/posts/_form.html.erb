@@ -1,0 +1,7 @@
+<%= form_for(post) do |f| %>
+    <div>Title: <%= f.text_field :title %></div>
+    <div>Content: <%= f.text_area :content %></div>
+    <div>Blogger: <%= f.collection_select :blogger_id, @bloggers, :id, :name %></div>
+    <div>Destination: <%= f.collection_select :destination_id, @destinations, :id, :name %></div>
+    <div><%= f.submit %></div>
+<% end %>

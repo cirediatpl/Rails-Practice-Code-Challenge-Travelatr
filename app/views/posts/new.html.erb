@@ -1,0 +1,9 @@
+<% if flash[:error] %>
+  <% flash[:error].each do |error_msg| %>
+    <li><%= error_msg %></li>
+  <% end %>
+<% end %>
+
+<h1>Create a Post</h1>
+
+<%= render 'form', post: @post %>
